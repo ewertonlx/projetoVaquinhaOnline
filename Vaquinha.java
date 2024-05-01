@@ -1,3 +1,6 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 public class Vaquinha {
     // Classe Pessoa com atributos comuns
     public class Pessoa {
@@ -10,6 +13,7 @@ public class Vaquinha {
     // Classe Receptor que herda todos atributos da classe Pessoa
     public class Receptor extends Pessoa {
         private String campanha;
+        private int idCampanha;
         private String descricaoCampanha;
         private int apoiadores;
         private int meta;
