@@ -1,42 +1,10 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.image.ComponentColorModel;
+// import src.classes.Pessoa;
 
 public class Vaquinha {
-    // Classe Pessoa com atributos comuns
-    public class Pessoa {
-        private String nome;
-        private String email;
-        private String cpf;
-        private String telefone;
-        private String endereco;
-    }
-
-    // Classe Receptor que herda todos atributos da classe Pessoa
-    public class Receptor extends Pessoa {
-        private String campanha;
-        private int idCampanha;
-        private String descricaoCampanha;
-        private int apoiadores;
-        private int meta;
-        private int arrecadado;
-        private String chavePix;
-    }
-
-    // Classe Instituição que herda tudo da classe Receptor e da classe Pessoa
-    public class Instituicao extends Receptor {
-        private String cnpj;
-        private String tipo;
-        private String site;
-    }
-
-    public class Doador extends Pessoa {
-        private int valor;
-    }
     public static void main(String[] args) {
-        Vaquinha vaquinha = new Vaquinha();
+
         // Criando uma janela
         JFrame frame = new JFrame("Vaquinha Online");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -57,7 +25,7 @@ public class Vaquinha {
         footer.setFont(new Font("Arial", Font.BOLD, 15)); // Define a fonte e o tamanho do texto
         
         // Carregando uma imagem
-        ImageIcon userIcon = new ImageIcon("images/u.png");
+        ImageIcon userIcon = new ImageIcon("src/images/user.png");
         JLabel userLabel = new JLabel(userIcon);
         userLabel.setPreferredSize(new Dimension(100, 100)); // Define o tamanho da imagem
         userLabel.setAlignmentX(Component.CENTER_ALIGNMENT); // Alinha a imagem ao centro
