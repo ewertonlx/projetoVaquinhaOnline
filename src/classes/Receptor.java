@@ -1,5 +1,6 @@
 package src.classes;
 public class Receptor extends Pessoa {
+    
     // Atributos
     private String campanha;
     private int idCampanha;

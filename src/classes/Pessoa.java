@@ -1,4 +1,6 @@
 package src.classes;
+import java.awt.List;
+import java.util.ArrayList;
 public class Pessoa {
     // Atributos
     private String nome;
@@ -6,7 +8,7 @@ public class Pessoa {
     private String cpf;
     private String telefone;
     private String endereco;
-        
+    private String senha;
     // Construtor padrão
     public Pessoa() {
     }
@@ -59,6 +61,14 @@ public class Pessoa {
 
     public void setEndereco(String endereco) {
         this.endereco = endereco;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
     /* ===========================================*/
 }

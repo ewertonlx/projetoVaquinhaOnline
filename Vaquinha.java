@@ -1,10 +1,13 @@
 import javax.swing.*;
 import java.awt.*;
+import src.functions.*;
 // import src.classes.Pessoa;
 
 public class Vaquinha {
     public static void main(String[] args) {
-
+        // Funções
+        LoginPainel chamarLogin = new LoginPainel();
+        RegistroPainel chamarRegistro = new RegistroPainel();
         // Criando uma janela
         JFrame frame = new JFrame("Vaquinha Online");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -33,14 +36,27 @@ public class Vaquinha {
         // Botões
         JButton login = new JButton("Login");
         JButton register = new JButton("Registre-se");
+
         // Botão LOGIN
         login.setPreferredSize(new Dimension(100, 50));
         login.setCursor(new Cursor(Cursor.HAND_CURSOR));
         login.setAlignmentX(Component.CENTER_ALIGNMENT);
+
         // Botão REGISTRO
         register.setCursor(new Cursor(Cursor.HAND_CURSOR));
         register.setPreferredSize(new Dimension(100, 50));
         register.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        // Interação com os botões
+        login.addActionListener(e -> {
+            chamarLogin.functionLogin();
+            frame.setVisible(false);
+        });
+
+        register.addActionListener(e -> {
+            chamarRegistro.chamarRegistro();
+            frame.setVisible(false);
+        });
 
         // Adicionando os itens na tela
         panel.add(Box.createVerticalGlue());

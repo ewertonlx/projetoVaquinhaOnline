@@ -1,6 +1,7 @@
 package src.classes;
 
 public class Doador extends Pessoa{
+    
     // Atributos
     private int valor;
 

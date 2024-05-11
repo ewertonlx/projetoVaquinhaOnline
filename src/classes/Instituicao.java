@@ -1,6 +1,7 @@
 package src.classes;
 
 public class Instituicao extends Receptor{
+    
     // Atributos
     private String cnpj;
     private String tipo;
