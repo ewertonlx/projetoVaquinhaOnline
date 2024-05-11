@@ -1,5 +1,6 @@
 package src.functions;
 import javax.swing.*;
+
 public class RegistroPainel {
     public void chamarRegistro() {
         JFrame registerFrame = new JFrame("Registre-se em nosso sistema!");
