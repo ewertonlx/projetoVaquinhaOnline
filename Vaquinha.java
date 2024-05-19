@@ -6,8 +6,8 @@ import src.functions.*;
 public class Vaquinha {
     public static void main(String[] args) {
         // Funções
-        LoginPainel chamarLogin = new LoginPainel();
-        RegistroPainel chamarRegistro = new RegistroPainel();
+        LoginPainel chamarLogin = new LoginPainel();  // Instanciando a classe LoginPainel
+        RegistroPainel chamarRegistro = new RegistroPainel(); // Instanciando a classe RegistroPainel
         // Criando uma janela
         JFrame frame = new JFrame("Vaquinha Online");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -16,7 +16,7 @@ public class Vaquinha {
         // Paineis (Tela)
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-        panel.setBackground(Color.getHSBColor(110, 194, 246));
+        panel.setBackground(Color.getHSBColor(110, 194, 246)); // Cor de fundo do painel
         // Textos
         JLabel title = new JLabel("Bem-vindo à Vaquinha Online");
         title.setAlignmentX(Component.CENTER_ALIGNMENT); // Alinha o texto ao centro
@@ -49,12 +49,12 @@ public class Vaquinha {
 
         // Interação com os botões
         login.addActionListener(e -> {
-            chamarLogin.functionLogin();
+            chamarLogin.functionLogin(); // Chama a função de login
             frame.setVisible(false);
         });
 
         register.addActionListener(e -> {
-            chamarRegistro.chamarRegistro();
+            chamarRegistro.chamarRegistro(); // Chama a função de registro
             frame.setVisible(false);
         });
 

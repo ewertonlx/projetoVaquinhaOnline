@@ -10,50 +10,50 @@ public class RegistroPainel {
 
         // Textos
         JLabel nameLabel = new JLabel("Nome");
-        nameLabel.setBounds(50, 0, 100, 50);
+        nameLabel.setBounds(50, 0, 100, 50); // posição do texto
 
         JLabel emailLabel = new JLabel("Email");
-        emailLabel.setBounds(50, 50, 100, 50);
+        emailLabel.setBounds(50, 50, 100, 50); // posição do texto
 
         JLabel cpfLabel = new JLabel("CPF");
-        cpfLabel.setBounds(50, 100, 100, 50);
+        cpfLabel.setBounds(50, 100, 100, 50); // posição do texto
 
         JLabel phoneLabel = new JLabel("Telefone");
-        phoneLabel.setBounds(50, 150, 100, 50);
+        phoneLabel.setBounds(50, 150, 100, 50); // posição do texto
 
         JLabel addressLabel = new JLabel("Endereço");
-        addressLabel.setBounds(50, 200, 100, 50);
+        addressLabel.setBounds(50, 200, 100, 50); // posição do texto
 
         JLabel passwordLabel = new JLabel("Senha");
-        passwordLabel.setBounds(50, 250, 100, 50);
+        passwordLabel.setBounds(50, 250, 100, 50); // posição do texto
 
         JLabel confirmPasswordLabel = new JLabel("Confirmar senha");
-        confirmPasswordLabel.setBounds(50, 300, 100, 50);
+        confirmPasswordLabel.setBounds(50, 300, 100, 50); // posição do texto
 
         // Campos de texto para preencher
         JTextField nameField = new JTextField();
-        nameField.setBounds(150, 0, 100, 50);
+        nameField.setBounds(150, 0, 100, 50); // posição do campo
         
         JTextField emailField = new JTextField();
-        emailField.setBounds(150, 50, 100, 50);
+        emailField.setBounds(150, 50, 100, 50); // posição do campo
         
         JTextField cpfField = new JTextField();
-        cpfField.setBounds(150, 100, 100, 50);
+        cpfField.setBounds(150, 100, 100, 50); // posição do campo
         
         JTextField phoneField = new JTextField();
-        phoneField.setBounds(150, 150, 100, 50);
+        phoneField.setBounds(150, 150, 100, 50); // posição do campo
         
         JTextField addressField = new JTextField();
-        addressField.setBounds(150, 200, 100, 50);
+        addressField.setBounds(150, 200, 100, 50); // posição do campo
         
         JPasswordField passwordField = new JPasswordField();
-        passwordField.setBounds(150, 250, 100, 50);
+        passwordField.setBounds(150, 250, 100, 50); // posição do campo
         
-        JPasswordField confirmPasswordField = new JPasswordField();
-        confirmPasswordField.setBounds(150, 300, 100, 50);
+        JPasswordField confirmPasswordField = new JPasswordField(); 
+        confirmPasswordField.setBounds(150, 300, 100, 50); // posição do campo
 
         JButton registerButton = new JButton("Register");
-        registerButton.setBounds(100, 350, 100, 50);
+        registerButton.setBounds(100, 350, 100, 50); // posição do botão
 
         // Adicionando tudo no painel
         registerFrame.add(nameLabel);
@@ -75,6 +75,8 @@ public class RegistroPainel {
 
         // Interação do botão registrar
         registerButton.addActionListener(e -> {
+
+            // Pegando os valores dos campos preenchidos
             String name = nameField.getText();
             String email = emailField.getText();
             String cpf = cpfField.getText();
@@ -93,12 +95,12 @@ public class RegistroPainel {
             } 
             // Caso não tenha nenhum erro, o sistema registra o usuário
             else {
-                RegistrarUsuario registrarUsuario = new RegistrarUsuario();
-                registrarUsuario.registrarUsuario(name, email, cpf, phone, address, password);
-                JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso!");
+                RegistrarUsuario registrarUsuario = new RegistrarUsuario(); // Instanciando a classe RegistrarUsuario   
+                registrarUsuario.registrarUsuario(name, email, cpf, phone, address, password); // Chamando a função registrarUsuario
+                JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso!"); // Mensagem de sucesso
                 registerFrame.setVisible(false);
-                LoginPainel loginPainel = new LoginPainel();
-                loginPainel.functionLogin();
+                LoginPainel loginPainel = new LoginPainel(); // Instanciando a classe LoginPainel
+                loginPainel.functionLogin(); // Chamando a função functionLogin
             }
             
         });
