@@ -3,11 +3,11 @@ import java.awt.*;
 import src.functions.*;
 import src.classes.Pessoa;
 import java.util.ArrayList;
-
+import java.util.List;
 public class Vaquinha {
+    public static List<Pessoa> pessoas = new ArrayList<Pessoa>(); // Array de pessoas
     public static void main(String[] args) {
         // Funções
-        ArrayList<Pessoa> pessoas = new ArrayList<Pessoa>(); // Array de pessoas
         LoginPainel chamarLogin = new LoginPainel();  // Instanciando a classe LoginPainel
         RegistroPainel chamarRegistro = new RegistroPainel(); // Instanciando a classe RegistroPainel
         // Criando uma janela

@@ -11,18 +11,12 @@ public class Pessoa {
     private String endereco;
     private String senha;
 
-    ArrayList<Pessoa> users = null;
     // Construtor padrão
     public Pessoa() {
     }
 
-    public void salvar(Pessoa p) {
-        users.add(p);
-        System.out.println(users);
-    }
-
     public Pessoa(ArrayList<Pessoa> users) {
-        this.users = users;
+        users = new ArrayList<Pessoa>();
     }
     // Construtor com parâmetros
     public Pessoa(String nome, String email, String cpf, String telefone, String endereco) {

@@ -1,12 +1,9 @@
 package src.functions;
-import java.util.ArrayList;
 import src.classes.Pessoa;
 import javax.swing.*;
-
 public class RegistroPainel {
     public void chamarRegistro() {
-        ArrayList<Pessoa> users = null;
-        Pessoa pessoa = new Pessoa(users);
+        Pessoa pessoa = new Pessoa(null);
         JFrame registerFrame = new JFrame("Registre-se em nosso sistema!");
         registerFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         registerFrame.setSize(300, 500);
