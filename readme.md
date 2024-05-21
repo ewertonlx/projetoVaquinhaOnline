@@ -5,7 +5,7 @@
 O Sistema de Vaquinha Online é uma plataforma desenvolvida em Java que permite aos usuários criar e participar de vaquinhas para arrecadar fundos para diversas finalidades. Seja para um projeto comunitário, uma causa social ou qualquer outra iniciativa, nosso projeto foi criado para um trabalho da faculdade.
 
 # Wire frame do projeto 🧬
-<img src="https://cdn.discordapp.com/attachments/1187881183611207850/1235267596497191002/Captura_de_Tela_2024-05-01_as_13.22.24_2.png?ex=6633c019&is=66326e99&hm=6f4ae88de534225998ad48b0f7715e3d57163726e4fb2b225956decb71a3ea77&">
+<img src="src/images/wireframe.png">
 
 ## Funcionalidades Principais 🧪
 
