@@ -1,4 +1,7 @@
 package src.classes;
+
+import java.util.ArrayList;
+
 public class Pessoa {
     // Atributos
     private String nome;
@@ -8,10 +11,19 @@ public class Pessoa {
     private String endereco;
     private String senha;
 
+    ArrayList<Pessoa> users = null;
     // Construtor padrão
     public Pessoa() {
     }
 
+    public void salvar(Pessoa p) {
+        users.add(p);
+        System.out.println(users);
+    }
+
+    public Pessoa(ArrayList<Pessoa> users) {
+        this.users = users;
+    }
     // Construtor com parâmetros
     public Pessoa(String nome, String email, String cpf, String telefone, String endereco) {
         this.nome = nome;

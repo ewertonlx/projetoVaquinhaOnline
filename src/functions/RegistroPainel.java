@@ -1,8 +1,12 @@
 package src.functions;
+import java.util.ArrayList;
+import src.classes.Pessoa;
 import javax.swing.*;
 
 public class RegistroPainel {
     public void chamarRegistro() {
+        ArrayList<Pessoa> users = null;
+        Pessoa pessoa = new Pessoa(users);
         JFrame registerFrame = new JFrame("Registre-se em nosso sistema!");
         registerFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         registerFrame.setSize(300, 500);
@@ -96,7 +100,7 @@ public class RegistroPainel {
             // Caso não tenha nenhum erro, o sistema registra o usuário
             else {
                 RegistrarUsuario registrarUsuario = new RegistrarUsuario(); // Instanciando a classe RegistrarUsuario   
-                registrarUsuario.registrarUsuario(name, email, cpf, phone, address, password); // Chamando a função registrarUsuario
+                registrarUsuario.registrarUsuario(pessoa,name, email, cpf, phone, address, password); // Chamando a função registrarUsuario
                 JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso!"); // Mensagem de sucesso
                 registerFrame.setVisible(false);
                 LoginPainel loginPainel = new LoginPainel(); // Instanciando a classe LoginPainel
