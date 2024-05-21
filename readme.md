@@ -27,10 +27,6 @@ O Sistema de Vaquinha Online é uma plataforma desenvolvida em Java que permite 
 
 Contribuições são bem-vindas! Se você tem alguma ideia para melhorar este projeto ou encontrou algum problema que gostaria de corrigir, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
-## Licença 📜
-
-Este projeto está licenciado sob a [Licença MIT](LICENSE), o que significa que você pode usá-lo livremente, modificar e distribuir, desde que inclua uma cópia da licença em qualquer cópia ou substancialmente o use.
-
 ## Contato ✉️
 
 Se você tiver alguma dúvida ou sugestão, não hesite em entrar em contato através do meu e-mail: [ewerton123ofc@gmail.com](mailto:ewerton123ofc@gmail.com) ou [laisedilene21@gmail.com](mailto:laisedilene21@gmail.com).
