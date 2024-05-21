@@ -2,8 +2,8 @@ package src.functions;
 import javax.swing.*;
 import java.awt.*;
 public class PainelGeral {
-    public void chamarPainel(){
-
+    public void chamarPainel(String nome){
+        
         // Criando uma janela
         JFrame geralFrame = new JFrame("Bem-vindo à Vaquinha Online");
         geralFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Para de executar o programa quando a janela é fechada
@@ -14,7 +14,7 @@ public class PainelGeral {
         painelGeral.setLayout(new BoxLayout(painelGeral, BoxLayout.Y_AXIS)); // Organização do painel
         painelGeral.setBackground(Color.getHSBColor(110, 194, 246)); // Cor de fundo do painel
 
-        JLabel titulo = new JLabel("Escolha uma opção"); // Texto
+        JLabel titulo = new JLabel("Olá " + nome + ", escolha uma opção!"); // Título mostrando o nome do usuário. A variável nome é passada como parâmetro na função "chamarPainel"
         titulo.setAlignmentX(Component.CENTER_ALIGNMENT); // Centralizando o texto
         titulo.setForeground(Color.WHITE); // Cor do texto
         titulo.setFont(new Font("Arial", Font.BOLD, 20)); // Fonte do texto

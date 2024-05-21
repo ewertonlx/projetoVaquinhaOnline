@@ -1,6 +1,7 @@
 package src.classes;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Pessoa {
     // Atributos
@@ -10,14 +11,12 @@ public class Pessoa {
     private String telefone;
     private String endereco;
     private String senha;
+    private static List<Pessoa> pessoas = new ArrayList<Pessoa>(); // Array de pessoas registradas, esse é o nosso "banco de dados"
 
     // Construtor padrão
     public Pessoa() {
     }
 
-    public Pessoa(ArrayList<Pessoa> users) {
-        users = new ArrayList<Pessoa>();
-    }
     // Construtor com parâmetros
     public Pessoa(String nome, String email, String cpf, String telefone, String endereco) {
         this.nome = nome;
@@ -26,7 +25,21 @@ public class Pessoa {
         this.telefone = telefone;
         this.endereco = endereco;
     }
+    
+    // Método para adicionar uma pessoa no array de pessoas
+    public static void adicionarPessoa(Pessoa pessoa) {
+        pessoas.add(pessoa);
+    }
 
+    // Método para retornar a lista de pessoas
+    public static List<Pessoa> getPessoas() {
+        return pessoas;
+    }
+
+    // Método toString para mostrar as informações da pessoa
+    public String toString() {
+        return "Nome: " + this.nome + "\nEmail: " + this.email + "\nCPF: " + this.cpf + "\nTelefone: " + this.telefone + "\nEndereço: " + this.endereco;
+    }
     // Getters e Setters
     public String getNome() {
         return nome;

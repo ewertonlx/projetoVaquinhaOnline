@@ -35,5 +35,10 @@ public class LoginPainel {
         loginFrame.add(passwordField);
         loginFrame.add(loginButton);
         loginFrame.setVisible(true);
+
+        loginButton.addActionListener(e -> {
+            // Verifica se o e-mail e a senha correspondem a algum usuário
+            VerificarSenha.verificarLogin(emailField.getText(), new String(passwordField.getPassword()));
+        });
     }
 }

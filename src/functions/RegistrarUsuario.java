@@ -3,14 +3,12 @@ import src.classes.Pessoa;
 
 public class RegistrarUsuario {
     public void registrarUsuario(Pessoa p, String nome, String email, String cpf, String telefone, String endereco, String senha) {
-        // Instanciando a classe Pessoa
-        Pessoa pessoa = new Pessoa(null);
-        pessoa.setNome(nome);
-        pessoa.setEmail(email);
-        pessoa.setCpf(cpf);
-        pessoa.setTelefone(telefone);
-        pessoa.setEndereco(endereco);
-        pessoa.setSenha(senha);
-        System.out.println(p.toString());
+        p.setNome(nome);
+        p.setEmail(email);
+        p.setCpf(cpf);
+        p.setTelefone(telefone);
+        p.setEndereco(endereco);
+        p.setSenha(senha);
+        p.adicionarPessoa(p); // Adiciona a pessoa no arrayList chamando a função adicionarPessoa()
     }
 }

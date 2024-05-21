@@ -3,7 +3,6 @@ import src.classes.Pessoa;
 import javax.swing.*;
 public class RegistroPainel {
     public void chamarRegistro() {
-        Pessoa pessoa = new Pessoa(null);
         JFrame registerFrame = new JFrame("Registre-se em nosso sistema!");
         registerFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         registerFrame.setSize(300, 500);
@@ -77,6 +76,8 @@ public class RegistroPainel {
         // Interação do botão registrar
         registerButton.addActionListener(e -> {
 
+            // Instanciando a classe Pessoa
+            Pessoa p = new Pessoa();
             // Pegando os valores dos campos preenchidos
             String name = nameField.getText();
             String email = emailField.getText();
@@ -97,7 +98,7 @@ public class RegistroPainel {
             // Caso não tenha nenhum erro, o sistema registra o usuário
             else {
                 RegistrarUsuario registrarUsuario = new RegistrarUsuario(); // Instanciando a classe RegistrarUsuario   
-                registrarUsuario.registrarUsuario(pessoa,name, email, cpf, phone, address, password); // Chamando a função registrarUsuario
+                registrarUsuario.registrarUsuario(p,name, email, cpf, phone, address, password); // Chamando a função registrarUsuario
                 JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso!"); // Mensagem de sucesso
                 registerFrame.setVisible(false);
                 LoginPainel loginPainel = new LoginPainel(); // Instanciando a classe LoginPainel
