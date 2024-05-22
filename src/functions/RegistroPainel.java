@@ -52,7 +52,7 @@ public class RegistroPainel {
         JPasswordField confirmPasswordField = new JPasswordField(); 
         confirmPasswordField.setBounds(150, 300, 100, 50); // posição do campo
 
-        JButton registerButton = new JButton("Register");
+        JButton registerButton = new JButton("Registrar-se");
         registerButton.setBounds(100, 350, 100, 50); // posição do botão
 
         // Adicionando tudo no painel

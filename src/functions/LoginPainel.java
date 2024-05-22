@@ -38,7 +38,7 @@ public class LoginPainel {
 
         loginButton.addActionListener(e -> {
             // Verifica se o e-mail e a senha correspondem a algum usuário
-            VerificarSenha.verificarLogin(emailField.getText(), new String(passwordField.getPassword()));
+            VerificarSenha.verificarLogin(emailField.getText(), new String(passwordField.getPassword()), loginFrame); // Chama a função verificarLogin passando o e-mail, a senha e a janela de login para depois poder desabilitar a janela de login
         });
     }
 }

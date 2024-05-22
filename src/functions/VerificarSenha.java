@@ -1,8 +1,9 @@
 package src.functions;
 import javax.swing.JOptionPane;
+import javax.swing.JFrame;
 import src.classes.Pessoa;
 public class VerificarSenha {
-    public static void verificarLogin(String email, String senha) {
+    public static void verificarLogin(String email, String senha, JFrame painel) {
         // Obtém todas as pessoas no arrayList
         for (Pessoa pessoa : Pessoa.getPessoas()) {
             // Verifica se o e-mail e a senha correspondem a algum usuário
@@ -10,6 +11,7 @@ public class VerificarSenha {
                 // Instancia o painel geral
                 PainelGeral pg = new PainelGeral();
                 pg.chamarPainel(pessoa.getNome()); // Chama o painel geral passando o nome do usuário
+                painel.setVisible(false); // Fecha o painel de login
                 return; // Termina a execução do método após encontrar o usuário
             }
         }
