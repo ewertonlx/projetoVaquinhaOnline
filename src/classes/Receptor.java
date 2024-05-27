@@ -1,4 +1,6 @@
 package src.classes;
+import java.util.ArrayList;
+import java.util.List;
 public class Receptor extends Pessoa {
     
     // Atributos
@@ -9,7 +11,7 @@ public class Receptor extends Pessoa {
     private int meta;
     private int arrecadado;
     private String chavePix;
-
+    private static List<Receptor> receptor = new ArrayList<Receptor>(); // Array de receptores de doações, esse é o nosso "banco de dados"
     // Construtor padrão
     public Receptor() {
     }
@@ -25,7 +27,15 @@ public class Receptor extends Pessoa {
         this.arrecadado = arrecadado;
         this.chavePix = chavePix;
     }
+    // Método para adicionar um receptor no array de receptor
+    public static void adicionarReceptor(Receptor receptors){
+        receptor.add(receptors);
+    }
 
+    // Método para retornar a lista de receptores
+    public static List<Receptor> getReceptores() {
+        return receptor;
+    }
     // Getters e Setters
     public String getCampanha() {
         return campanha;

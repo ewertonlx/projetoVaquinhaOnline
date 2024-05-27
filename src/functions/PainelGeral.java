@@ -1,4 +1,5 @@
 package src.functions;
+import src.functions.pagesPainel.*;
 import javax.swing.*;
 import java.awt.*;
 public class PainelGeral {
@@ -54,5 +55,9 @@ public class PainelGeral {
         geralFrame.add(painelGeral);
         geralFrame.setVisible(true);
         
+        verCampanhas.addActionListener(e -> {
+            Campanhas campanhas = new Campanhas();
+            campanhas.chamarCampanhas();
+        });
     }
 }

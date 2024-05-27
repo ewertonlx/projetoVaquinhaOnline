@@ -1,4 +1,6 @@
 package src.classes;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Instituicao extends Receptor{
     
@@ -6,6 +8,7 @@ public class Instituicao extends Receptor{
     private String cnpj;
     private String tipo;
     private String site;
+    private static List<Instituicao> instituicoes = new ArrayList<Instituicao>(); // Array de instituições de doações, esse é o nosso "banco de dados"
 
     // Construtor padrão
     public Instituicao() {
@@ -17,6 +20,16 @@ public class Instituicao extends Receptor{
         this.cnpj = cnpj;
         this.tipo = tipo;
         this.site = site;
+    }
+
+    // Método para adicionar uma instituição no array de instituições
+    public static void adicionarInstituicao(Instituicao instituicao){
+        instituicoes.add(instituicao);
+    }
+
+    // Método para retornar a lista de instituições
+    public static List<Instituicao> getIntituicoes() {
+        return instituicoes;
     }
 
     // Getters e Setters
