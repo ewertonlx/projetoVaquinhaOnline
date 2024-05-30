@@ -55,9 +55,18 @@ public class PainelGeral {
         geralFrame.add(painelGeral);
         geralFrame.setVisible(true);
         
+        doar.addActionListener(e -> {
+            Doar painelDoar = new Doar();
+            painelDoar.chamarDoar();
+        });
         verCampanhas.addActionListener(e -> {
             Campanhas campanhas = new Campanhas();
             campanhas.chamarCampanhas();
+        });
+
+        criarCampanha.addActionListener(e -> {
+            CriarCampPainel campPainel = new CriarCampPainel();
+            campPainel.chamarCampanhaPainel();
         });
     }
 }

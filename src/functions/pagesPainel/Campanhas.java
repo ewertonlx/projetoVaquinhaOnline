@@ -1,11 +1,14 @@
 package src.functions.pagesPainel;
+import src.functions.PainelGeral;
 import java.awt.*;
 import javax.swing.*;
-import src.classes.Doador;
 import src.classes.Instituicao;
+import src.classes.Receptor;
+
 import java.util.List;
+
 public class Campanhas {
-    Doador doador = new Doador();
+    Receptor doador = new Receptor();
     Instituicao instituicao = new Instituicao();
     public void chamarCampanhas(){
         JFrame campanhasFrame = new JFrame("Campanhas");
@@ -20,17 +23,24 @@ public class Campanhas {
         title.setAlignmentX(Component.CENTER_ALIGNMENT); // Alinha o texto ao centro
         title.setForeground(Color.WHITE); // Cor do texto
         title.setFont(new Font("Arial", Font.BOLD, 20)); // Define a fonte e o tamanho do texto
-
-        List campanhas = doador.getDoadores();
+        
+        JButton voltarButton = new JButton("Voltar");
+        voltarButton.setPreferredSize(new Dimension(100, 50));
+        voltarButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        voltarButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        
+        panel.add(title);
+        List<Receptor> campanhas = doador.getReceptores();
         System.out.println(campanhas.size());
-        for (int i = 0; i < campanhas.size(); i++) {
-            if(campanhas.size() == 0){
-                JLabel semCampanha = new JLabel("Não há campanhas disponíveis");
-                semCampanha.setAlignmentX(Component.CENTER_ALIGNMENT); // Alinha o texto ao centro
-                semCampanha.setForeground(Color.WHITE); // Cor do texto
-                semCampanha.setFont(new Font("Arial", Font.BOLD, 15)); // Define a fonte e o tamanho do texto
-                panel.add(semCampanha);
-            } else {
+
+        if (campanhas.size() == 0) {
+            JLabel semCampanha = new JLabel("Não há campanhas disponíveis");
+            semCampanha.setAlignmentX(Component.CENTER_ALIGNMENT); // Alinha o texto ao centro
+            semCampanha.setForeground(Color.WHITE); // Cor do texto
+            semCampanha.setFont(new Font("Arial", Font.BOLD, 15)); // Define a fonte e o tamanho do texto
+            panel.add(semCampanha);
+        } else {
+            for (int i = 0; i < campanhas.size(); i++) {
                 JLabel campanha = new JLabel(campanhas.get(i).toString());
                 campanha.setAlignmentX(Component.CENTER_ALIGNMENT); // Alinha o texto ao centro
                 campanha.setForeground(Color.WHITE); // Cor do texto
@@ -39,8 +49,14 @@ public class Campanhas {
             }
         }
         System.out.println(campanhas);
-        panel.add(title);
+        panel.add(voltarButton);
         campanhasFrame.add(panel);
         campanhasFrame.setVisible(true);
+
+        voltarButton.addActionListener(e -> {
+            PainelGeral painelGeral = new PainelGeral();      
+            painelGeral.chamarPainel("usuário");
+            campanhasFrame.setVisible(false);
+        });
     }
 }

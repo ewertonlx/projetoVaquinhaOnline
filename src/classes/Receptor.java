@@ -8,7 +8,7 @@ public class Receptor extends Pessoa {
     private int idCampanha;
     private String descricaoCampanha;
     private int apoiadores;
-    private int meta;
+    private String meta;
     private int arrecadado;
     private String chavePix;
     private static List<Receptor> receptor = new ArrayList<Receptor>(); // Array de receptores de doações, esse é o nosso "banco de dados"
@@ -17,7 +17,7 @@ public class Receptor extends Pessoa {
     }
 
     // Construtor com parâmetros
-    public Receptor(String nome, String email, String cpf, String telefone, String endereco, String campanha, int idCampanha, String descricaoCampanha, int apoiadores, int meta, int arrecadado, String chavePix) {
+    public Receptor(String nome, String email, String cpf, String telefone, String endereco, String campanha, int idCampanha, String descricaoCampanha, int apoiadores, String meta, int arrecadado, String chavePix) {
         super(nome, email, cpf, telefone, endereco);
         this.campanha = campanha;
         this.idCampanha = idCampanha;
@@ -69,11 +69,11 @@ public class Receptor extends Pessoa {
         this.apoiadores = apoiadores;
     }
 
-    public int getMeta() {
+    public String getMeta() {
         return meta;
     }
 
-    public void setMeta(int meta) {
+    public void setMeta(String meta) {
         this.meta = meta;
     }
 
@@ -91,6 +91,10 @@ public class Receptor extends Pessoa {
 
     public void setChavePix(String chavePix) {
         this.chavePix = chavePix;
+    }
+
+    public String toString(){
+        return "\nCampanha: " + this.getCampanha() + "\nID da Campanha: " + this.getIdCampanha() + "\nDescrição da Campanha: " + this.getDescricaoCampanha() + "\nApoiadores: " + this.getApoiadores() + "\nMeta: " + this.getMeta() + "\nArrecadado: " + this.getArrecadado() + "\nChave PIX: " + this.getChavePix();
     }
     /* ===========================================*/
 }
