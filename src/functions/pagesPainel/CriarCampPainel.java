@@ -1,18 +1,14 @@
 package src.functions.pagesPainel;
 import javax.swing.*;
-
-import src.classes.Pessoa;
 import src.classes.Receptor;
 import src.functions.CriarCampanha;
-import src.functions.LoginPainel;
 import src.functions.PainelGeral;
-import src.functions.RegistrarUsuario;
 public class CriarCampPainel {
     public void chamarCampanhaPainel() {
         // Criando a janela de criar campanha
         JFrame campanhaFrame = new JFrame("Crie uma campanha");
         campanhaFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        campanhaFrame.setSize(300, 300);
+        campanhaFrame.setSize(500, 500);
         campanhaFrame.setLayout(null);
 
         // Textos para identificar os campos
@@ -43,7 +39,7 @@ public class CriarCampPainel {
 
         // Botão criar campanha
         JButton criarCampanhaButton = new JButton("Criar campanha");
-        criarCampanhaButton.setBounds(100, 250, 100, 50); // posição do botão
+        criarCampanhaButton.setBounds(100, 250, 130, 50); // posição do botão
 
         // Adicionando tudo na janela
         campanhaFrame.add(campanhaLabel);
