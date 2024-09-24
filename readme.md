@@ -27,8 +27,3 @@ O Sistema de Vaquinha Online é uma plataforma desenvolvida em Java que permite 
 
 Contribuições são bem-vindas! Se você tem alguma ideia para melhorar este projeto ou encontrou algum problema que gostaria de corrigir, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
-## Contato ✉️
-
-Se você tiver alguma dúvida ou sugestão, não hesite em entrar em contato através do meu e-mail: [ewerton123ofc@gmail.com](mailto:ewerton123ofc@gmail.com) ou [laisedilene21@gmail.com](mailto:laisedilene21@gmail.com).
-
----
